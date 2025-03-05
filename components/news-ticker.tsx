@@ -59,7 +59,7 @@ export function NewsTickerBottom() {
           hover:animate-shimmer
         "
       >
-        Test positive
+        Coming soon...
       </a>
     </div>
   )

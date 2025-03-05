@@ -3,6 +3,7 @@ export interface NewsArticle {
   url: string
   source: string
   publishedAt: Date
-  imageUrl: string | null // Add this line
+  imageUrl: string | null
+  description: string
 }
 

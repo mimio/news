@@ -18,20 +18,22 @@ interface CryptoData {
 
 export function CryptoTicker() {
   const [prices, setPrices] = useState<CryptoData>({})
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     const fetchPrices = async () => {
       try {
-        const response = await fetch(
-          `https://api.coingecko.com/api/v3/simple/price?ids=${cryptos.map((c) => c.id).join(",")}&vs_currencies=usd&include_24hr_change=true`,
-        )
+        const response = await fetch('/api/crypto')
+        
         if (!response.ok) {
           throw new Error("Network response was not ok")
         }
         const data = await response.json()
         setPrices(data)
+        setError(false)
       } catch (error) {
         console.error("Failed to fetch crypto prices:", error)
+        setError(true)
       }
     }
 
@@ -40,6 +42,10 @@ export function CryptoTicker() {
 
     return () => clearInterval(interval)
   }, [])
+
+  if (error) {
+    return null // Hide the ticker if there's an error
+  }
 
   return (
     <div className="flex items-center space-x-2 text-[8px]">

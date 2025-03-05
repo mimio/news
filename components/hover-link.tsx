@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export function HoverLink({ href, children, className = "" }) {
+export function HoverLink({ href, children, className = "" }: { href: string, children: React.ReactNode, className?: string }) {
   return (
     <Link
       href={href}

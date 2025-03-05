@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "MIMIO | Creative Design & Development Studio | Portland, Oregon",
+  title: "mimio | portland, oregon",
   description: "Portland-based creative design and development studio crafting innovative digital experiences. Specializing in web design, development, and creative technology solutions.",
   keywords: [
     "creative design",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     "brand development"
   ],
   openGraph: {
-    title: "MIMIO | WABBIT | Portland, Oregon",
+    title: "mimio | portland, oregon",
     description: "Portland-based creative design and development studio crafting innovative digital experiences. Specializing in web design, development, and creative technology solutions.",
     url: "https://mimio.co",
-    siteName: "MIMIO",
+    siteName: "mimio",
     // images: [
     //   {
     //     url: "/og-image.jpg", // You'll need to add this image to your public folder
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MIMIO | WABBIT | Portland, Oregon",
+    title: "mimio | portland, oregon",
     description: "Portland-based creative design and development studio crafting innovative digital experiences. Specializing in web design, development, and creative technology solutions.",
     // images: ["/og-image.jpg"], // Same image as OpenGraph
   },
